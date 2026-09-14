@@ -1,0 +1,3 @@
+name: CI
+on: {pull_request: {branches: [main]}, push: {branches: [main]}}
+jobs: {validate: {runs-on: ubuntu-latest, steps: [{uses: "actions/checkout@v4"}, {name: "Validar estructura", run: "test -f README.md && echo OK"}]}}
